@@ -23,8 +23,6 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;line-height:1.6;min-height:100vh}
-
-/* HEADER */
 .hdr{background:var(--sur);border-bottom:1px solid var(--bdr);padding:2.5rem 2rem 2rem;position:relative;overflow:hidden}
 .hdr::before{content:'';position:absolute;top:-60px;right:-60px;width:320px;height:320px;background:radial-gradient(circle,rgba(244,99,30,.1) 0%,transparent 70%);pointer-events:none}
 .hi{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;flex-wrap:wrap}
@@ -37,8 +35,6 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
 .gcl{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx3);font-weight:600}
 .gcv{font-family:var(--fh);font-size:1.4rem;font-weight:700;margin-top:2px}
 .gcs2{font-size:11px;color:var(--tx2);margin-top:1px}
-
-/* PHASE BAR */
 .pw{padding:1.5rem 2rem 0}
 .pl{font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tx3);margin-bottom:.75rem}
 .pb{display:flex;gap:4px;flex-wrap:wrap}
@@ -51,11 +47,7 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
 .ph-aug{background:var(--teld);border-color:rgba(45,212,191,.2);color:var(--tel)}
 .ph-taper{background:var(--purd);border-color:rgba(155,109,255,.2);color:var(--pur)}
 .ph-race{background:var(--orgd);border-color:rgba(244,99,30,.3);color:var(--org);flex:.5}
-
-/* MAIN */
 .main{padding:1.5rem 2rem 4rem;max-width:960px}
-
-/* REFERENCE CARDS */
 .refs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem}
 .ref{background:var(--card);border:1px solid var(--bdrl);border-radius:14px;overflow:hidden}
 .rh{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;cursor:pointer;user-select:none}
@@ -69,21 +61,16 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
 .rex:last-child{border-bottom:none}
 .ren{flex:1;color:var(--txt)}
 .res{font-size:11px;color:var(--tx2);white-space:nowrap;font-family:var(--fh);letter-spacing:.03em}
-.rnote{margin-top:10px;font-size:12px;color:var(--tx2);line-height:1.6;padding:7px 10px;background:rgba(255,255,255,.03);border-radius:6px;border-left:2px solid var(--bdrl)}
-.pace-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--bdr);font-size:13px}
-.pace-row:last-child{border-bottom:none}
-.pace-type{color:var(--txt)}
-.pace-val{font-family:var(--fh);font-size:14px;font-weight:700;letter-spacing:.03em}
-
-/* SECTION DIVIDERS */
+.rnote{margin-top:10px;font-size:12px;color:var(--tx2);line-height:1.7;padding:8px 10px;background:rgba(255,255,255,.03);border-radius:6px;border-left:2px solid var(--bdrl)}
+.prow{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--bdr);font-size:13px}
+.prow:last-child{border-bottom:none}
+.pv{font-family:var(--fh);font-size:14px;font-weight:700;letter-spacing:.03em}
 .sd{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tx3);margin:1.5rem 0 .75rem}
 .sd::after{content:'';flex:1;height:1px;background:var(--bdr)}
 .sd.free{color:var(--tel)}
 .sd.free::after{background:rgba(45,212,191,.2)}
 .sd.trans{color:var(--org)}
 .sd.trans::after{background:rgba(244,99,30,.2)}
-
-/* WEEK ROWS */
 .wk{background:var(--card);border:1px solid var(--bdr);border-radius:12px;margin-bottom:6px;overflow:hidden;transition:border-color .15s}
 .wk:hover{border-color:var(--bdrl)}
 .wk.open{border-color:var(--bdrl)}
@@ -110,15 +97,15 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
 .wkmi{font-family:var(--fh);font-size:16px;font-weight:700;color:var(--tx2);min-width:52px;text-align:right;letter-spacing:.03em}
 .wkch{color:var(--tx3);font-size:16px;transition:transform .2s;line-height:1}
 .wk.open .wkch{transform:rotate(180deg)}
-
-/* DETAIL */
 .wkdet{display:none;padding:0 14px 14px;border-top:1px solid var(--bdr);background:rgba(0,0,0,.2)}
 .wk.open .wkdet{display:block}
 .dw{padding-top:10px}
-.dr{display:grid;grid-template-columns:34px 1fr;gap:8px;padding:5px 0;border-bottom:1px solid var(--bdr);align-items:start}
+.dr{display:grid;grid-template-columns:52px 1fr;gap:8px;padding:5px 0;border-bottom:1px solid var(--bdr);align-items:start}
 .dr:last-of-type{border-bottom:none}
-.dn{font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--tx3);text-transform:uppercase;padding-top:3px}
-.dc{display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+.dl{display:flex;flex-direction:column}
+.dn{font-family:var(--fh);font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--tx3);text-transform:uppercase;line-height:1.2}
+.ddate{font-size:10px;color:var(--tx3);margin-top:1px}
+.dc{display:flex;flex-wrap:wrap;align-items:center;gap:4px;padding-top:2px}
 .pill{font-size:10px;font-weight:600;padding:2px 9px;border-radius:999px;letter-spacing:.02em;border:1px solid transparent}
 .p-lift{background:var(--grnd);color:var(--grn);border-color:rgba(59,186,110,.2)}
 .p-easy{background:var(--blud);color:var(--blu);border-color:rgba(74,158,255,.2)}
@@ -129,17 +116,15 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
 .p-legs{background:var(--legd);color:var(--leg);border-color:rgba(255,140,66,.25)}
 .p-hike{background:var(--hikd);color:var(--hik);border-color:rgba(52,199,133,.25)}
 .p-event{background:var(--evtd);color:var(--evt);border-color:rgba(179,157,255,.2)}
-.p-race{background:var(--orgd);color:var(--org);border-color:rgba(244,99,30,.4);font-weight:700}
+.p-race{background:var(--orgd);color:var(--org);border-color:rgba(244,99,30,.4);font-weight:700;font-size:11px}
 .p-drive{background:#0f0f14;color:var(--tx2);border-color:var(--bdr)}
+.pnote{font-size:11px;font-weight:600;color:var(--amb);width:100%;margin-top:2px;letter-spacing:.01em}
 .dnote{font-size:11px;color:var(--tx3);font-style:italic;width:100%;margin-top:1px}
-.pace-note{font-size:11px;font-weight:600;color:var(--amb);width:100%;margin-top:2px;font-style:normal;letter-spacing:.01em}
 .hcard{background:rgba(52,199,133,.06);border:1px solid rgba(52,199,133,.2);border-radius:8px;padding:8px 12px;margin-top:4px;width:100%}
 .hcn{font-family:var(--fh);font-size:13px;font-weight:700;color:var(--hik)}
 .hcd{font-size:11px;color:var(--tx2);margin-top:2px}
-.fairfield-note{font-size:11px;background:rgba(244,163,30,.08);border:1px solid rgba(244,163,30,.2);border-radius:6px;padding:5px 10px;margin-top:4px;width:100%;color:var(--amb)}
+.ffnote{font-size:11px;background:rgba(244,163,30,.08);border:1px solid rgba(244,163,30,.2);border-radius:6px;padding:5px 10px;margin-top:4px;width:100%;color:var(--amb)}
 .wkf{margin-top:10px;padding:8px 12px;background:var(--sur);border-radius:8px;border-left:3px solid var(--bdrl);font-size:12px;color:var(--tx2);line-height:1.6}
-
-/* RACE CARD */
 .rc{background:var(--card);border:1px solid rgba(244,99,30,.4);border-radius:16px;padding:1.5rem;margin-top:1.5rem;position:relative;overflow:hidden}
 .rc::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(244,99,30,.1) 0%,transparent 70%);pointer-events:none}
 .rct{font-family:var(--fh);font-size:1.6rem;font-weight:800;color:var(--org);letter-spacing:.02em;margin-bottom:4px}
@@ -148,7 +133,6 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
 .rti{background:var(--sur);border:1px solid var(--bdr);border-radius:10px;padding:10px 8px;text-align:center}
 .rtv{font-family:var(--fh);font-size:1.3rem;font-weight:800;letter-spacing:.02em;line-height:1}
 .rtl{font-size:10px;color:var(--tx3);margin-top:4px;letter-spacing:.05em;text-transform:uppercase;font-weight:600}
-
 @media(max-width:640px){
   .hdr,.pw,.main{padding-left:1rem;padding-right:1rem}
   .ht{font-size:2rem}
@@ -158,13 +142,12 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
 </style>
 </head>
 <body>
-
 <div class="hdr">
   <div class="hi">
     <div>
       <div class="ey">10k Training Plan · May – Sept 2026</div>
       <div class="ht">Long Beach <span>Sept 5</span></div>
-      <div class="hs">29M · 6'2" · 215 lbs · Mile PR 5:44 · Current flat 10k projection ~1:04</div>
+      <div class="hs">29M · 6'2" · 215 lbs · Mile PR 5:44 · Current flat projection ~1:04</div>
     </div>
     <div class="gcs">
       <div class="gc"><div class="gcl">A Goal</div><div class="gcv" style="color:var(--org)">Sub-57</div><div class="gcs2">9:11/mi</div></div>
@@ -173,7 +156,6 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
     </div>
   </div>
 </div>
-
 <div class="pw">
   <div class="pl">Phase overview</div>
   <div class="pb">
@@ -182,28 +164,25 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
     <div class="ps ph-peak"><div class="pn">Peak</div><div class="pd">Jul 22–Aug 18</div></div>
     <div class="ps ph-aug"><div class="pn">Free Aug</div><div class="pd">Aug 1+</div></div>
     <div class="ps ph-taper"><div class="pn">Taper</div><div class="pd">Aug 19–Sep 4</div></div>
-    <div class="ps ph-race"><div class="pn">Race</div><div class="pd">Sep 5</div></div>
+    <div class="ps ph-race"><div class="pn">Race</div><div class="pd">Sat Sep 5</div></div>
   </div>
 </div>
-
 <div class="main">
-
-  <!-- REFERENCE CARDS -->
   <div class="refs">
-    <div class="ref" id="ref1">
-      <div class="rh" onclick="document.getElementById('ref1').classList.toggle('open')">
-        <div><div class="rt2" style="color:var(--leg)">Leg Day Reference</div><div class="rsub">A (quad) + B (posterior) — 2× per off week</div></div>
+    <div class="ref" id="r1">
+      <div class="rh" onclick="document.getElementById('r1').classList.toggle('open')">
+        <div><div class="rt2" style="color:var(--leg)">Leg Day Reference</div><div class="rsub">A (quad) + B (posterior) — 2× per off week, never on run days</div></div>
         <span class="rchev">&#8964;</span>
       </div>
       <div class="rb">
-        <div style="margin-top:12px;margin-bottom:8px;font-family:var(--fh);font-size:13px;font-weight:700;color:var(--leg);letter-spacing:.04em">LEG DAY A — Quad / Power</div>
+        <div style="margin-top:12px;margin-bottom:8px;font-family:var(--fh);font-size:12px;font-weight:700;color:var(--leg);letter-spacing:.08em;text-transform:uppercase">Leg Day A — Quad / Power</div>
         <div class="rex"><span class="ren">Back Squat <em style="color:var(--tx3)">(or Goblet)</em></span><span class="res">4 × 8</span></div>
         <div class="rex"><span class="ren">Leg Press</span><span class="res">3 × 12</span></div>
         <div class="rex"><span class="ren">Walking DB Lunges</span><span class="res">3 × 10 ea.</span></div>
         <div class="rex"><span class="ren">Leg Extension</span><span class="res">3 × 15</span></div>
         <div class="rex"><span class="ren">Standing Calf Raise</span><span class="res">4 × 20</span></div>
         <div class="rex"><span class="ren">Plank</span><span class="res">3 × 45 sec</span></div>
-        <div style="margin-top:12px;margin-bottom:8px;font-family:var(--fh);font-size:13px;font-weight:700;color:var(--amb);letter-spacing:.04em">LEG DAY B — Posterior / Hamstring</div>
+        <div style="margin-top:12px;margin-bottom:8px;font-family:var(--fh);font-size:12px;font-weight:700;color:var(--amb);letter-spacing:.08em;text-transform:uppercase">Leg Day B — Posterior / Hamstring</div>
         <div class="rex"><span class="ren">Romanian Deadlift</span><span class="res">4 × 8–10</span></div>
         <div class="rex"><span class="ren">Hip Thrust</span><span class="res">3 × 12</span></div>
         <div class="rex"><span class="ren">Lying Hamstring Curl</span><span class="res">3 × 12</span></div>
@@ -212,35 +191,37 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
         <div class="rex"><span class="ren">Dead Bug</span><span class="res">3 × 10 ea.</span></div>
       </div>
     </div>
-    <div class="ref" id="ref2">
-      <div class="rh" onclick="document.getElementById('ref2').classList.toggle('open')">
-        <div><div class="rt2" style="color:var(--blu)">Pace Guide</div><div class="rsub">Target paces by run type — updated each phase</div></div>
+    <div class="ref" id="r2">
+      <div class="rh" onclick="document.getElementById('r2').classList.toggle('open')">
+        <div><div class="rt2" style="color:var(--blu)">Pace Guide + Rules</div><div class="rsub">Every run has a target — no vague "easy runs"</div></div>
         <span class="rchev">&#8964;</span>
       </div>
       <div class="rb">
-        <div style="margin-top:12px;margin-bottom:4px;font-family:var(--fh);font-size:11px;font-weight:700;color:var(--tx3);letter-spacing:.1em;text-transform:uppercase">Run types</div>
-        <div class="pace-row"><span class="pace-type">Easy / Recovery</span><span class="pace-val" style="color:var(--blu)">10:30–11:00/mi</span></div>
-        <div class="pace-row"><span class="pace-type">Long Run</span><span class="pace-val" style="color:var(--amb)">10:00–10:30/mi</span></div>
-        <div class="pace-row"><span class="pace-type">Tempo</span><span class="pace-val" style="color:var(--org)">9:00–9:30/mi</span></div>
-        <div class="pace-row"><span class="pace-type">Race Pace (A goal)</span><span class="pace-val" style="color:var(--org)">9:11/mi</span></div>
-        <div class="pace-row"><span class="pace-type">Race Pace (B goal)</span><span class="pace-val" style="color:var(--blu)">9:40/mi</span></div>
-        <div class="rnote">Easy = fully conversational, nose breathing. Tempo = comfortably hard — you can speak a sentence but don't want to. Long run = aerobic cruise, never gasping. Paces improve naturally as fitness builds — these are starting benchmarks.</div>
-        <div style="margin-top:10px;font-family:var(--fh);font-size:11px;font-weight:700;color:var(--tx3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px">Rules</div>
+        <div style="margin-top:12px;margin-bottom:4px;font-family:var(--fh);font-size:11px;font-weight:700;color:var(--tx3);letter-spacing:.1em;text-transform:uppercase">Target paces</div>
+        <div class="prow"><span>Easy (base, May–Jun)</span><span class="pv" style="color:var(--blu)">10:30–11:00/mi</span></div>
+        <div class="prow"><span>Easy (build/peak, Jul–Aug)</span><span class="pv" style="color:var(--blu)">9:45–10:15/mi</span></div>
+        <div class="prow"><span>Long run</span><span class="pv" style="color:var(--amb)">10:00–10:45/mi</span></div>
+        <div class="prow"><span>Tempo (build in Jul)</span><span class="pv" style="color:var(--org)">9:15/mi</span></div>
+        <div class="prow"><span>Tempo (peak in Aug)</span><span class="pv" style="color:var(--org)">9:00/mi</span></div>
+        <div class="prow"><span>Race pace — A goal</span><span class="pv" style="color:var(--org)">9:11/mi</span></div>
+        <div class="prow"><span>Race pace — B goal</span><span class="pv" style="color:var(--blu)">9:40/mi</span></div>
+        <div style="margin-top:10px;margin-bottom:4px;font-family:var(--fh);font-size:11px;font-weight:700;color:var(--tx3);letter-spacing:.1em;text-transform:uppercase">Non-negotiable rules</div>
         <div class="rnote" style="margin-top:0">
-          Drive days = full rest, no exceptions.<br>
-          Fairfield work days (10.5hr shifts) = run only if afternoon/PM shift — morning window only. Skip if morning/unknown shift.<br>
-          Yoga = hot yoga AM via ClassPass (book early). Run = PM/evening on yoga days.<br>
-          Leg days = off weeks only. Work weeks = upper body at lunch only.
+          ✗ Run + leg day = <strong style="color:var(--txt)">never same day</strong><br>
+          ✗ Drive day = <strong style="color:var(--txt)">full rest, no exceptions</strong><br>
+          ✗ Flight day = full rest<br>
+          ✗ Two hard sessions back-to-back = never<br>
+          ✓ Yoga = hot yoga AM (ClassPass), run = PM/evening<br>
+          ✓ Long runs = morning is fine<br>
+          ✓ Fairfield work days = run OR lift — pick one only
         </div>
       </div>
     </div>
   </div>
-
   <div id="weekList"></div>
-
   <div class="rc">
-    <div class="rct">&#127937; Long Beach 10k — Saturday, September 5</div>
-    <div class="rcs">Flat sea-level course. Arrive 60 min early. 10 min easy warmup + strides. Mile 1: 9:20/mi (conservative). Miles 2–3: settle into 9:11/mi. Miles 4–6: push.</div>
+    <div class="rct">&#127937; Long Beach 10k — <span style="color:var(--txt)">Saturday</span>, September 5</div>
+    <div class="rcs">Flat sea-level course. Arrive 60 min early. 10 min easy warmup + strides. Mile 1 at 9:20/mi — conservative. Miles 2–3 settle into pace. Miles 4–6 push.</div>
     <div class="rcg">
       <div class="rti"><div class="rtv" style="color:var(--org)">9:11/mi</div><div class="rtl">A goal pace</div></div>
       <div class="rti"><div class="rtv" style="color:var(--blu)">9:40/mi</div><div class="rtl">B goal pace</div></div>
@@ -249,7 +230,6 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
     </div>
   </div>
 </div>
-
 <script>
 const pc={lift:'p-lift',easy:'p-easy',tempo:'p-tempo',long:'p-long',yoga:'p-yoga',rest:'p-rest',legs:'p-legs',hike:'p-hike',event:'p-event',race:'p-race',drive:'p-drive'};
 const phc={base:'bbase',build:'bbuild',peak:'bpeak',taper:'btaper','race-week':'brw'};
@@ -257,213 +237,270 @@ const tc={work:'bw',off:'bo',free:'bf',transition:'bt'};
 const tl={work:'Work Week',off:'Off Week',free:'Free',transition:'Transition'};
 
 const weeks=[
+  // ─────────────────────────────────────────────────────────
+  // WEEK 1  May 6 (Wed) – May 12 (Tue)
+  // ─────────────────────────────────────────────────────────
   {num:1,type:'work',dates:'May 6–12',phase:'base',miles:'6',current:true,
-   events:['May 12: 1:30pm start — skip gym'],
-   focus:'3pm–1:30am Simi shifts. Gym = lunch break (upper body only, no legs — too sweaty). Morning free for runs. Paces are easy — building the aerobic foundation.',
+   events:['Runs shift to Sun May 10 + Mon May 11'],
+   focus:'Missed May 6 and 8 — no stress. Pick up two easy 3-milers on Sunday and Monday before the real plan kicks off Wednesday the 13th.',
    days:[
-    {d:'Wed',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'3 mi @ 10:45/mi — easy aerobic',n:'chest / tri at lunch'},
-    {d:'Thu',w:[['lift','Lift (lunch)']],n:'back / bi'},
-    {d:'Fri',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'3 mi @ 10:45/mi — easy aerobic',n:'shoulders at lunch'},
-    {d:'Sat',w:[['lift','Lift (lunch)']],n:'upper + leg ext / calves ok'},
-    {d:'Sun',w:[['rest','Rest']],n:''},
-    {d:'Mon',w:[['lift','Lift (lunch)']],n:'full upper'},
-    {d:'Tue',w:[['rest','Rest']],n:'May 12 — 1:30pm start, skip gym'}
+    {d:'Wed',dt:'May 6', w:[['lift','Lift (lunch)']], n:'chest / tri'},
+    {d:'Thu',dt:'May 7', w:[['lift','Lift (lunch)']], n:'back / bi'},
+    {d:'Fri',dt:'May 8', w:[['lift','Lift (lunch)']], n:'shoulders'},
+    {d:'Sat',dt:'May 9', w:[['lift','Lift (lunch)']], n:'upper + leg ext / calves ok'},
+    {d:'Sun',dt:'May 10', w:[['easy','Easy 3 mi']], p:'3 mi @ 10:45/mi — nose breathing the whole way',n:'catch-up run #1'},
+    {d:'Mon',dt:'May 11', w:[['easy','Run AM 3 mi'],['lift','Lift (lunch)']], p:'3 mi @ 10:45/mi',n:'catch-up run #2 + full upper at lunch'},
+    {d:'Tue',dt:'May 12', w:[['rest','Rest']], n:'1:30pm start — skip gym'}
   ]},
-  {num:2,type:'off',dates:'May 13–19',phase:'base',miles:'16',
-   events:['May 16–17: working 3pm–1:30am'],
-   focus:'Hot yoga AM → run PM. First two leg days of the plan. May 16–17 working 3pm — yoga + run done before noon.',
+  // ─────────────────────────────────────────────────────────
+  // WEEK 2  May 13 (Wed) – May 19 (Tue)
+  // ─────────────────────────────────────────────────────────
+  {num:2,type:'off',dates:'May 13–19',phase:'base',miles:'13',
+   events:['Sat May 16 + Sun May 17: working 3pm–1:30am'],
+   focus:'Real plan starts here. Yoga AM → run PM. Legs on their own days — never combined with a run. Sat long run done before 3pm shift. 2-day buffer between long run (Sat) and Leg Day B (Mon).',
    days:[
-    {d:'Wed',w:[['yoga','Hot yoga AM'],['easy','Easy 4 mi PM']],p:'4 mi @ 10:45/mi — fully conversational',n:'ClassPass, book earliest slot'},
-    {d:'Thu',w:[['legs','Leg Day A']],n:'squat, leg press, lunges, extensions, calves, plank'},
-    {d:'Fri',w:[['yoga','Hot yoga AM'],['easy','Easy 3 mi PM']],p:'3 mi @ 10:45/mi',n:'working 3pm — done by noon'},
-    {d:'Sat',w:[['long','Long run 6 mi']],p:'6 mi @ 10:45–11:00/mi — long slow distance',n:'morning — working 3pm, start by 7:30am'},
-    {d:'Sun',w:[['rest','Rest']],n:'working 3pm'},
-    {d:'Mon',w:[['legs','Leg Day B']],n:'RDL, hip thrust, hamstring curl, step-ups, calves'},
-    {d:'Tue',w:[['rest','Rest']],n:''}
+    {d:'Wed',dt:'May 13', w:[['yoga','Hot yoga AM'],['easy','Easy 4 mi PM']], p:'4 mi @ 10:45/mi — fully conversational',n:'ClassPass, book earliest slot'},
+    {d:'Thu',dt:'May 14', w:[['legs','Leg Day A']], n:'squats, leg press, lunges, extensions, calves — easy run Wed means legs are fresh'},
+    {d:'Fri',dt:'May 15', w:[['yoga','Hot yoga AM'],['easy','Easy 3 mi PM']], p:'3 mi @ 10:45/mi — yoga loosens DOMS from Leg Day A',n:'working 3pm — done by noon'},
+    {d:'Sat',dt:'May 16', w:[['long','Long run 6 mi']], p:'6 mi @ 10:45–11:00/mi',n:'working 3pm — start by 7:30am, done by 9:30am'},
+    {d:'Sun',dt:'May 17', w:[['rest','Rest']], n:'working 3pm'},
+    {d:'Mon',dt:'May 18', w:[['legs','Leg Day B']], n:'2 days since long run with 1 rest in between — good timing'},
+    {d:'Tue',dt:'May 19', w:[['rest','Rest']], n:''}
   ]},
-  {num:3,type:'work',dates:'May 20–26',phase:'base',miles:'6',events:[],
-   focus:'Normal Simi week. Runs are easy and short — consistency is the goal, not intensity.',
+  // ─────────────────────────────────────────────────────────
+  // WEEK 3  May 20 (Wed) – May 26 (Tue)
+  // ─────────────────────────────────────────────────────────
+  {num:3,type:'work',dates:'May 20–26',phase:'base',miles:'6',
+   events:['Mon May 25: Memorial Day (check gym hours)'],
+   focus:'Simi work week. Run AM before 3pm shift, lift upper body at lunch. Pace is easy — building aerobic foundation, not fitness.',
    days:[
-    {d:'Wed',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'3 mi @ 10:30/mi',n:'chest / tri'},
-    {d:'Thu',w:[['lift','Lift (lunch)']],n:'back / bi'},
-    {d:'Fri',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'3 mi @ 10:30/mi',n:'shoulders'},
-    {d:'Sat',w:[['lift','Lift (lunch)']],n:'upper + accessories'},
-    {d:'Sun',w:[['rest','Rest']],n:''},
-    {d:'Mon',w:[['lift','Lift (lunch)']],n:'full upper'},
-    {d:'Tue',w:[['rest','Rest']],n:''}
+    {d:'Wed',dt:'May 20', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'3 mi @ 10:30/mi',n:'chest / tri'},
+    {d:'Thu',dt:'May 21', w:[['lift','Lift (lunch)']], n:'back / bi'},
+    {d:'Fri',dt:'May 22', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'3 mi @ 10:30/mi',n:'shoulders'},
+    {d:'Sat',dt:'May 23', w:[['lift','Lift (lunch)']], n:'upper + accessories'},
+    {d:'Sun',dt:'May 24', w:[['rest','Rest']], n:''},
+    {d:'Mon',dt:'May 25', w:[['lift','Lift (lunch)']], n:'Memorial Day — check if gym is open'},
+    {d:'Tue',dt:'May 26', w:[['rest','Rest']], n:''}
   ]},
-  {num:4,type:'off',dates:'May 27–Jun 2',phase:'base',miles:'7–13',
-   events:['May 28: Drive Simi → Fairfield (6 hrs) — REST','May 29–Jun 1: Working Fairfield (10.5hr shifts)','Jun 2: Drive Fairfield → Simi (6 hrs) — REST'],
-   focus:'Drive days are full rest — 6 hours each way. On Fairfield shift days: run ONLY if shift is afternoon/PM (morning window available). If shift is morning or unknown, skip it. No lifting in Fairfield.',
+  // ─────────────────────────────────────────────────────────
+  // WEEK 4  May 27 (Wed) – Jun 2 (Tue)
+  // ─────────────────────────────────────────────────────────
+  {num:4,type:'off',dates:'May 27–Jun 2',phase:'base',miles:'4–10',
+   events:['Thu May 28: Leg Day A → Drive Simi→Fairfield (6 hrs)','Fri May 29–Mon Jun 1: Fairfield shifts','Tue Jun 2: Drive Fairfield→Simi (6 hrs) — REST'],
+   focus:'May 27: yoga + run only — no legs today. May 28: Leg Day A in the morning, then drive. Drive REST days on both ends. Fairfield work days: pick ONE — run AM, treadmill PM, or lift. Jun 1 is ideal for Leg Day B since it\'s a Fairfield lifting option.',
    days:[
-    {d:'Wed',w:[['legs','Leg Day A AM'],['easy','Easy 4 mi PM']],p:'4 mi @ 10:30/mi',n:'May 27 — Simi, last full training day before Fairfield'},
-    {d:'Thu',w:[['drive','Drive day — REST']],n:'May 28 — Simi → Fairfield, 6 hrs. Do not run.',fairfield:false},
-    {d:'Fri',w:[['easy','AM run (if PM shift)']],p:'3 mi @ 10:30/mi — only if afternoon shift confirmed',n:'May 29 — Fairfield shift day',ff:true},
-    {d:'Sat',w:[['easy','AM run (if PM shift)']],p:'3 mi @ 10:30/mi — only if afternoon shift',n:'May 30 — Fairfield shift day',ff:true},
-    {d:'Sun',w:[['rest','Rest — Fairfield shift']],n:'May 31 — rest regardless, mid-trip fatigue'},
-    {d:'Mon',w:[['easy','AM run (if PM shift)']],p:'3 mi @ 10:30/mi — only if afternoon shift',n:'Jun 1 — Fairfield last shift',ff:true},
-    {d:'Tue',w:[['drive','Drive day — REST']],n:'Jun 2 — Fairfield → Simi, 6 hrs. Do not run.'}
+    {d:'Wed',dt:'May 27', w:[['yoga','Hot yoga AM'],['easy','Easy 4 mi PM']], p:'4 mi @ 10:30/mi',n:'Simi — NO legs today, saving for tomorrow morning'},
+    {d:'Thu',dt:'May 28', w:[['legs','Leg Day A'],['drive','Drive to Fairfield (6 hrs)']], n:'Legs first in AM, then hit the road. No running today.'},
+    {d:'Fri',dt:'May 29', w:[['easy','Run AM 3 mi']], p:'3 mi @ 10:30/mi — OR lift instead. Pick one.',n:'Fairfield',ff:true},
+    {d:'Sat',dt:'May 30', w:[['easy','Run AM 3 mi']], p:'3 mi @ 10:30/mi — OR lift instead',n:'Fairfield',ff:true},
+    {d:'Sun',dt:'May 31', w:[['rest','Rest']], n:'Fairfield — mid-trip, rest regardless'},
+    {d:'Mon',dt:'Jun 1', w:[['legs','Leg Day B']], n:'Fairfield — good day to lift instead of run',ff:true},
+    {d:'Tue',dt:'Jun 2', w:[['drive','Drive Fairfield→Simi — REST']], n:'6 hrs — do not run'}
   ]},
+  // ─────────────────────────────────────────────────────────
+  // WEEK 5  Jun 3 (Wed) – Jun 9 (Tue)
+  // ─────────────────────────────────────────────────────────
   {num:5,type:'work',dates:'Jun 3–9',phase:'build',miles:'6',events:[],
-   focus:'Build phase begins. Back in Simi. Pace ticks down slightly — you should feel fitter.',
+   focus:'Build phase. Back in Simi. Pace ticks slightly faster. Body should feel more comfortable running now.',
    days:[
-    {d:'Wed',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'3 mi @ 10:15/mi',n:'chest / tri'},
-    {d:'Thu',w:[['lift','Lift (lunch)']],n:'back / bi'},
-    {d:'Fri',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'3 mi @ 10:15/mi',n:'shoulders'},
-    {d:'Sat',w:[['lift','Lift (lunch)']],n:'upper + accessories'},
-    {d:'Sun',w:[['rest','Rest']],n:''},
-    {d:'Mon',w:[['lift','Lift (lunch)']],n:'full upper'},
-    {d:'Tue',w:[['rest','Rest']],n:''}
+    {d:'Wed',dt:'Jun 3', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'3 mi @ 10:15/mi',n:'chest / tri'},
+    {d:'Thu',dt:'Jun 4', w:[['lift','Lift (lunch)']], n:'back / bi'},
+    {d:'Fri',dt:'Jun 5', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'3 mi @ 10:15/mi',n:'shoulders'},
+    {d:'Sat',dt:'Jun 6', w:[['lift','Lift (lunch)']], n:'upper + accessories'},
+    {d:'Sun',dt:'Jun 7', w:[['rest','Rest']], n:''},
+    {d:'Mon',dt:'Jun 8', w:[['lift','Lift (lunch)']], n:'full upper'},
+    {d:'Tue',dt:'Jun 9', w:[['rest','Rest']], n:''}
   ]},
-  {num:6,type:'off',dates:'Jun 10–16',phase:'build',miles:'8–11',
-   events:['Jun 12–14: San Diego'],
-   focus:'SD is a trip. Real training Wed/Mon — enjoy San Diego without pressure. 1 easy run there max if spontaneous, beach+explore otherwise.',
+  // ─────────────────────────────────────────────────────────
+  // WEEK 6  Jun 10 (Wed) – Jun 16 (Tue)
+  // ─────────────────────────────────────────────────────────
+  {num:6,type:'off',dates:'Jun 10–16',phase:'build',miles:'8–9',
+   events:['Fri Jun 12–Sun Jun 14: San Diego','Beach run Sat Jun 13'],
+   focus:'Jun 12 = travel to SD, settle in, no workout. Jun 13 = beach run day. Jun 14 = last day, enjoy. Training stays in Simi on Wed. 2-day rest gap before Mon Leg Day B.',
    days:[
-    {d:'Wed',w:[['yoga','Hot yoga AM'],['easy','Easy 4 mi PM']],p:'4 mi @ 10:15/mi',n:'Simi'},
-    {d:'Thu',w:[['legs','Leg Day A']],n:'last full gym day before SD'},
-    {d:'Fri',w:[['easy','Easy run (optional)']],p:'2–3 mi @ 10:15/mi — only if spontaneous',n:'SD — beach, explore, no pressure'},
-    {d:'Sat',w:[['rest','Rest / enjoy SD']],n:''},
-    {d:'Sun',w:[['rest','Rest / enjoy SD']],n:''},
-    {d:'Mon',w:[['legs','Leg Day B']],n:'back from SD'},
-    {d:'Tue',w:[['rest','Rest']],n:''}
+    {d:'Wed',dt:'Jun 10', w:[['yoga','Hot yoga AM'],['easy','Easy 4 mi PM']], p:'4 mi @ 10:15/mi',n:'Simi'},
+    {d:'Thu',dt:'Jun 11', w:[['legs','Leg Day A']], n:'last gym session before SD'},
+    {d:'Fri',dt:'Jun 12', w:[['rest','Rest / travel to SD']], n:'settle in — no workout, rest after Leg Day'},
+    {d:'Sat',dt:'Jun 13', w:[['easy','SD Beach run']], p:'3–4 mi @ 10:10/mi — easy and scenic',n:'this is the beach run day'},
+    {d:'Sun',dt:'Jun 14', w:[['rest','Rest / enjoy SD']], n:'last day — relax'},
+    {d:'Mon',dt:'Jun 15', w:[['legs','Leg Day B']], n:'back in Simi — 2 days since beach run ✓'},
+    {d:'Tue',dt:'Jun 16', w:[['rest','Rest']], n:''}
   ]},
-  {num:7,type:'work',dates:'Jun 17–23',phase:'build',miles:'8',events:[],
-   focus:'Mileage ticks up on work week runs — 4 mi now instead of 3. Same easy effort.',
+  // ─────────────────────────────────────────────────────────
+  // WEEK 7  Jun 17 (Wed) – Jun 23 (Tue)
+  // ─────────────────────────────────────────────────────────
+  {num:7,type:'work',dates:'Jun 17–23',phase:'build',miles:'8',
+   events:['Fri Jun 19: Juneteenth (check gym hours)'],
+   focus:'Run distance steps up to 4 miles on work-week runs. Still fully aerobic — you should be able to hold a full conversation.',
    days:[
-    {d:'Wed',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'4 mi @ 10:00–10:15/mi',n:'chest / tri'},
-    {d:'Thu',w:[['lift','Lift (lunch)']],n:'back / bi'},
-    {d:'Fri',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'4 mi @ 10:00–10:15/mi',n:'shoulders'},
-    {d:'Sat',w:[['lift','Lift (lunch)']],n:'upper + accessories'},
-    {d:'Sun',w:[['rest','Rest']],n:''},
-    {d:'Mon',w:[['lift','Lift (lunch)']],n:'full upper'},
-    {d:'Tue',w:[['rest','Rest']],n:''}
+    {d:'Wed',dt:'Jun 17', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'4 mi @ 10:00–10:15/mi',n:'chest / tri'},
+    {d:'Thu',dt:'Jun 18', w:[['lift','Lift (lunch)']], n:'back / bi'},
+    {d:'Fri',dt:'Jun 19', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'4 mi @ 10:00–10:15/mi',n:'Juneteenth — check gym hours'},
+    {d:'Sat',dt:'Jun 20', w:[['lift','Lift (lunch)']], n:'upper + accessories'},
+    {d:'Sun',dt:'Jun 21', w:[['rest','Rest']], n:''},
+    {d:'Mon',dt:'Jun 22', w:[['lift','Lift (lunch)']], n:'full upper'},
+    {d:'Tue',dt:'Jun 23', w:[['rest','Rest']], n:''}
   ]},
+  // ─────────────────────────────────────────────────────────
+  // WEEK 8  Jun 24 (Wed) – Jun 30 (Tue)
+  // ─────────────────────────────────────────────────────────
   {num:8,type:'off',dates:'Jun 24–30',phase:'build',miles:'7–16',
-   events:['Jun 25: Drive Simi → Fairfield (6 hrs) — REST','Jun 26–29: Working Northbay Fairfield (10.5hr shifts)','Jun 30: Drive Fairfield → Simi (6 hrs) — REST'],
-   focus:'Both drive days are full rest — 6 hrs each way. Stack all real training on Wed (long run) before leaving. Fairfield runs conditional on PM shift only.',
+   events:['Thu Jun 25: Drive Simi→Fairfield (6 hrs) — REST','Fri Jun 26–Mon Jun 29: Fairfield shifts','Tue Jun 30: Drive Fairfield→Simi (6 hrs) — REST'],
+   focus:'Long run Wed before leaving — it\'s the only quality session this week. The drive Thursday is a bonus recovery day after the long run. Both drive days = full rest. Fairfield: run OR lift, pick one per day.',
    days:[
-    {d:'Wed',w:[['yoga','Hot yoga AM'],['long','Long run 7 mi PM']],p:'7 mi @ 10:15/mi — biggest run yet',n:'Jun 24 — Simi, last real training day'},
-    {d:'Thu',w:[['drive','Drive day — REST']],n:'Jun 25 — Simi → Fairfield, 6 hrs. Full rest.'},
-    {d:'Fri',w:[['easy','AM run (if PM shift)']],p:'3 mi @ 10:10/mi',n:'Jun 26 — Fairfield shift',ff:true},
-    {d:'Sat',w:[['easy','AM run (if PM shift)']],p:'3 mi @ 10:10/mi',n:'Jun 27 — Fairfield shift',ff:true},
-    {d:'Sun',w:[['rest','Rest — Fairfield shift']],n:'Jun 28 — rest regardless'},
-    {d:'Mon',w:[['easy','AM run (if PM shift)']],p:'3 mi @ 10:10/mi',n:'Jun 29 — Fairfield last shift',ff:true},
-    {d:'Tue',w:[['drive','Drive day — REST']],n:'Jun 30 — Fairfield → Simi, 6 hrs. Full rest.'}
+    {d:'Wed',dt:'Jun 24', w:[['yoga','Hot yoga AM'],['long','Long run 7 mi PM']], p:'7 mi @ 10:10/mi — biggest run yet',n:'Simi — yoga AM loosens hips for PM long run'},
+    {d:'Thu',dt:'Jun 25', w:[['drive','Drive Simi→Fairfield — REST']], n:'6 hrs — also a recovery day from long run'},
+    {d:'Fri',dt:'Jun 26', w:[['easy','Run AM 3 mi']], p:'3 mi @ 10:10/mi — OR lift instead',n:'Fairfield — 2 days since long run ✓',ff:true},
+    {d:'Sat',dt:'Jun 27', w:[['easy','Run AM 3 mi']], p:'3 mi @ 10:10/mi — OR lift',n:'Fairfield',ff:true},
+    {d:'Sun',dt:'Jun 28', w:[['rest','Rest']], n:'Fairfield — mid-trip rest'},
+    {d:'Mon',dt:'Jun 29', w:[['easy','Run AM 3 mi']], p:'3 mi @ 10:10/mi — OR lift',n:'Fairfield last shift',ff:true},
+    {d:'Tue',dt:'Jun 30', w:[['drive','Drive Fairfield→Simi — REST']], n:'6 hrs — full rest'}
   ]},
+  // ─────────────────────────────────────────────────────────
+  // WEEK 9  Jul 1 (Wed) – Jul 7 (Tue)
+  // ─────────────────────────────────────────────────────────
   {num:9,type:'work',dates:'Jul 1–7',phase:'build',miles:'8',
-   events:['Jul 4 — extra time'],
-   focus:'Jul 4 frees up a morning. Normal Simi week otherwise. 4 mi runs, pace continues to improve.',
+   events:['Sat Jul 4: Independence Day — Saturday in 2026 (gym closed)'],
+   focus:'July 4 falls on a Saturday — gym is closed anyway. Two clean 4-mile runs on Wed and Fri. Pace continuing to improve.',
    days:[
-    {d:'Wed',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'4 mi @ 10:00/mi',n:'chest / tri'},
-    {d:'Thu',w:[['lift','Lift (lunch)']],n:'back / bi'},
-    {d:'Fri',w:[['rest','Jul 4 — rest or easy walk']],n:''},
-    {d:'Sat',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'4 mi @ 10:00/mi',n:'shoulders'},
-    {d:'Sun',w:[['rest','Rest']],n:''},
-    {d:'Mon',w:[['lift','Lift (lunch)']],n:'full upper'},
-    {d:'Tue',w:[['rest','Rest']],n:''}
+    {d:'Wed',dt:'Jul 1', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'4 mi @ 10:00/mi',n:'chest / tri'},
+    {d:'Thu',dt:'Jul 2', w:[['lift','Lift (lunch)']], n:'back / bi'},
+    {d:'Fri',dt:'Jul 3', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'4 mi @ 10:00/mi',n:'shoulders — pre-holiday Friday'},
+    {d:'Sat',dt:'Jul 4', w:[['rest','Rest — Jul 4 holiday']], n:'gym closed — Saturday this year'},
+    {d:'Sun',dt:'Jul 5', w:[['rest','Rest']], n:''},
+    {d:'Mon',dt:'Jul 6', w:[['lift','Lift (lunch)']], n:'full upper'},
+    {d:'Tue',dt:'Jul 7', w:[['rest','Rest']], n:''}
   ]},
-  {num:10,type:'off',dates:'Jul 8–14',phase:'build',miles:'16–18',
-   events:['Jul 10: Drive Simi → Vegas (~4.5 hrs) — REST on arrival','Jul 10–12: Las Vegas'],
-   focus:'Drive to Vegas on Jul 10 = rest that day. Jul 11–12 settled in — hotel treadmill or pre-6am outdoor only. 110°F+ by 9am. Stack quality training Wed/Thu in Simi before leaving.',
+  // ─────────────────────────────────────────────────────────
+  // WEEK 10  Jul 8 (Wed) – Jul 14 (Tue)
+  // ─────────────────────────────────────────────────────────
+  {num:10,type:'off',dates:'Jul 8–14',phase:'build',miles:'14',
+   events:['Fri Jul 10: Drive Simi→Vegas (~4.5 hrs) — REST on arrival','Sat–Sun Jul 11–12: Las Vegas','Sun Jul 12: Drive Vegas→Simi — REST'],
+   focus:'Thu Jul 9 = Leg Day A only, no run — full separation. Both drive days = rest. Jul 11 settled in = treadmill only (110°F+ outside). FIRST TEMPO Mon Jul 13 back in Simi — drive REST on Sun means legs are fresh and ready for quality work.',
    days:[
-    {d:'Wed',w:[['yoga','Hot yoga AM'],['easy','Easy 4 mi PM']],p:'4 mi @ 10:00/mi',n:'Jul 8 — Simi'},
-    {d:'Thu',w:[['legs','Leg Day A'],['tempo','Tempo 5 mi PM']],p:'1 mi easy → 3 mi @ 9:15/mi → 1 mi easy',n:'Jul 9 — Simi, key workout before Vegas'},
-    {d:'Fri',w:[['drive','Drive → Vegas — REST']],n:'Jul 10 — Simi → Vegas, ~4.5 hrs. Settle in, no workout.'},
-    {d:'Sat',w:[['easy','Treadmill run']],p:'5 mi @ 10:00/mi — hotel treadmill only',n:'Jul 11 — settled in Vegas, AC required'},
-    {d:'Sun',w:[['easy','Treadmill run']],p:'3 mi @ 10:00/mi — treadmill or drive back',n:'Jul 12 — Vegas or heading home'},
-    {d:'Mon',w:[['legs','Leg Day B']],n:'Jul 13 — back in Simi'},
-    {d:'Tue',w:[['rest','Rest']],n:'Jul 14'}
+    {d:'Wed',dt:'Jul 8', w:[['yoga','Hot yoga AM'],['easy','Easy 4 mi PM']], p:'4 mi @ 10:00/mi',n:'Simi'},
+    {d:'Thu',dt:'Jul 9', w:[['legs','Leg Day A — only']], n:'Simi. No run today — full separation from run day.'},
+    {d:'Fri',dt:'Jul 10', w:[['drive','Drive Simi→Vegas — REST']], n:'~4.5 hrs. Settle in. No workout.'},
+    {d:'Sat',dt:'Jul 11', w:[['easy','Treadmill 5 mi']], p:'5 mi @ 10:00/mi — hotel gym only, AC required',n:'Vegas, settled in — legs rested from drive day'},
+    {d:'Sun',dt:'Jul 12', w:[['drive','Drive Vegas→Simi — REST']], n:'~4.5 hrs. Full rest.'},
+    {d:'Mon',dt:'Jul 13', w:[['tempo','Tempo 5 mi']], p:'1 mi easy → 3 mi @ 9:15/mi → 1 mi easy — FIRST TEMPO',n:'back in Simi — drive REST = fresh legs, perfect for quality work'},
+    {d:'Tue',dt:'Jul 14', w:[['legs','Leg Day B']], n:'day after tempo — different stimulus from running, manageable'}
   ]},
+  // ─────────────────────────────────────────────────────────
+  // WEEK 11  Jul 15 (Wed) – Jul 21 (Tue)
+  // ─────────────────────────────────────────────────────────
   {num:11,type:'work',dates:'Jul 15–21',phase:'peak',miles:'8',events:[],
-   focus:'Peak phase. Pace drops to 9:50/mi on easy runs — you\'re getting fitter and it shows.',
+   focus:'Peak phase begins. Recovery work week after Vegas block. Pace at 9:50–10:00/mi — noticeably faster than May.',
    days:[
-    {d:'Wed',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'4 mi @ 9:50–10:00/mi',n:'chest / tri'},
-    {d:'Thu',w:[['lift','Lift (lunch)']],n:'back / bi'},
-    {d:'Fri',w:[['easy','Run AM'],['lift','Lift (lunch)']],p:'4 mi @ 9:50–10:00/mi',n:'shoulders'},
-    {d:'Sat',w:[['lift','Lift (lunch)']],n:'upper + accessories'},
-    {d:'Sun',w:[['rest','Rest']],n:''},
-    {d:'Mon',w:[['lift','Lift (lunch)']],n:'full upper'},
-    {d:'Tue',w:[['rest','Rest']],n:''}
+    {d:'Wed',dt:'Jul 15', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'4 mi @ 9:50–10:00/mi',n:'chest / tri'},
+    {d:'Thu',dt:'Jul 16', w:[['lift','Lift (lunch)']], n:'back / bi'},
+    {d:'Fri',dt:'Jul 17', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'4 mi @ 9:50–10:00/mi',n:'shoulders'},
+    {d:'Sat',dt:'Jul 18', w:[['lift','Lift (lunch)']], n:'upper + accessories'},
+    {d:'Sun',dt:'Jul 19', w:[['rest','Rest']], n:''},
+    {d:'Mon',dt:'Jul 20', w:[['lift','Lift (lunch)']], n:'full upper'},
+    {d:'Tue',dt:'Jul 21', w:[['rest','Rest']], n:''}
   ]},
-  {num:12,type:'off',dates:'Jul 22–28',phase:'peak',miles:'14–16',
-   events:['Jul 22–25: San Francisco','Jul 25→26: Drive SF → Fairfield (~1 hr)','Jul 26–28: Working Northbay Fairfield (10.5hr shifts)','Jul 29 AM: Drive Fairfield → Simi (6 hrs)'],
-   focus:'SF→Fairfield drive is only 1 hr, easy. Jul 29 drive back to Simi = 6 hrs = full rest. Only 1 leg day possible this week — don\'t force the second. Long run in SF Saturday.',
+  // ─────────────────────────────────────────────────────────
+  // WEEK 12  Jul 22 (Wed) – Jul 28 (Tue)
+  // ─────────────────────────────────────────────────────────
+  {num:12,type:'off',dates:'Jul 22–28',phase:'peak',miles:'12',
+   events:['Wed Jul 22–Sat Jul 25: San Francisco','Sat Jul 25: Checkout → drive to Fairfield (~1 hr)','Sun Jul 26–Tue Jul 28: Working Northbay Fairfield'],
+   focus:'Smart sequencing: Leg Day Wed → REST Thu → long run Fri (2 full days between legs and run). Short shakeout before checkout Sat. Jul 27 Fairfield: run fits naturally before or after the shift.',
    days:[
-    {d:'Wed',w:[['yoga','Hot yoga AM'],['easy','Easy 4 mi PM']],p:'4 mi @ 9:50/mi',n:'Jul 22 — Simi, drive to SF later if needed'},
-    {d:'Thu',w:[['legs','Leg Day A'],['easy','Easy 3 mi']],p:'3 mi @ 9:50/mi easy',n:'Jul 23 — SF, gym if hotel has one'},
-    {d:'Fri',w:[['rest','Rest / explore SF']],n:'Jul 24 — save legs for Sat run'},
-    {d:'Sat',w:[['long','Long run 5–6 mi']],p:'6 mi @ 9:50/mi — Golden Gate Park or Embarcadero. Not checkout day.',n:'Jul 25 — SF'},
-    {d:'Sun',w:[['drive','SF → Fairfield (~1 hr) + shift']],n:'Jul 26 — short drive, but brutal Fairfield shift'},
-    {d:'Mon',w:[['rest','Rest — Fairfield shift']],n:'Jul 27 — full rest'},
-    {d:'Tue',w:[['rest','Rest — Fairfield shift']],n:'Jul 28 — last Fairfield shift'}
+    {d:'Wed',dt:'Jul 22', w:[['legs','Leg Day A — only']], n:'Simi or SF. No yoga, no run. Body gets a real rest day before long run.'},
+    {d:'Thu',dt:'Jul 23', w:[['rest','Rest']], n:'SF — explore, 1 full rest day after Leg Day A'},
+    {d:'Fri',dt:'Jul 24', w:[['long','Long run 7 mi']], p:'7 mi @ 9:50/mi — Golden Gate Park or Embarcadero',n:'SF — 2 days after Leg Day A with rest Thu = well-rested ✓'},
+    {d:'Sat',dt:'Jul 25', w:[['easy','Short AM run → checkout']], p:'2–3 mi @ 9:50/mi before checking out',n:'SF → drive to Fairfield (~1 hr) after run'},
+    {d:'Sun',dt:'Jul 26', w:[['rest','Rest — Fairfield shift']], n:'first shift, settle in'},
+    {d:'Mon',dt:'Jul 27', w:[['easy','Run 3–4 mi']], p:'3 mi @ 9:50/mi — before or after shift',n:'Fairfield — fit it around work',ff:true},
+    {d:'Tue',dt:'Jul 28', w:[['rest','Rest — Fairfield shift']], n:'last Fairfield shift'}
   ]},
+  // ─────────────────────────────────────────────────────────
+  // WEEK 13  Jul 29 (Wed) – Jul 31 (Fri)
+  // ─────────────────────────────────────────────────────────
   {num:13,type:'transition',dates:'Jul 29–31',phase:'peak',miles:'3',
-   events:['Jul 29: Drive Fairfield → Simi (6 hrs) — REST','Jul 31: Last day of work'],
-   focus:'Jul 29 is a 6-hour drive — full rest. Easy shakeout Jul 30. Jul 31 last shift. After that, August is yours.',
+   events:['Wed Jul 29: Drive Fairfield→Simi (6 hrs) — REST','Fri Jul 31: Last day of work'],
+   focus:'6-hour drive Wednesday = full rest. Easy shakeout Thursday. Last shift Friday. August starts Saturday.',
    days:[
-    {d:'Wed',w:[['drive','Drive day — REST']],n:'Jul 29 — Fairfield → Simi, 6 hrs'},
-    {d:'Thu',w:[['easy','Easy 3 mi']],p:'3 mi @ 9:50/mi — shakeout, very easy',n:'Jul 30'},
-    {d:'Fri',w:[['rest','Rest']],n:'Jul 31 — last day of work. Done.'}
+    {d:'Wed',dt:'Jul 29', w:[['drive','Drive Fairfield→Simi — REST']], n:'6 hrs — stretch at stops, that\'s it'},
+    {d:'Thu',dt:'Jul 30', w:[['easy','Easy 3 mi']], p:'3 mi @ 9:50/mi — shakeout, very easy',n:''},
+    {d:'Fri',dt:'Jul 31', w:[['rest','Rest']], n:'last day of work. Done.'}
   ]},
-  {num:14,type:'free',dates:'Aug 1–5',phase:'peak',miles:'17',
-   events:['Completely free','Full leg days back','KBBQ dinner'],
-   focus:'First free days. No work schedule. Legs fully back in the program since you\'re not returning to work sweaty. Run PM. Long run peaks here.',
+  // ─────────────────────────────────────────────────────────
+  // WEEK 14  Aug 1 (Sat) – Aug 5 (Wed)
+  // ─────────────────────────────────────────────────────────
+  {num:14,type:'free',dates:'Aug 1–5',phase:'peak',miles:'8',
+   events:['Aug 1 = Saturday (first free day!)','KBBQ dinner Wed Aug 5'],
+   focus:'Long run first while legs are freshest — don\'t try to cram tempo in here too. Two full rest days after the long run, then Leg Day A when truly recovered. No yoga + tempo this mini-block.',
    days:[
-    {d:'Fri',w:[['legs','Leg Day A']],n:'Aug 1 — first free day, full gym'},
-    {d:'Sat',w:[['long','Long run 9 mi']],p:'9 mi @ 10:00/mi, push last 2 miles @ 9:11/mi',n:'Aug 2 — Santa Monica / Malibu coastal'},
-    {d:'Sun',w:[['hike','Griffith Park Hike']],n:'Aug 3',hike:{name:'Griffith Park — Mt Hollywood Trail',detail:'5 mi RT · 900 ft gain · Iconic 360° LA skyline views · Berlin Forest trail up'}},
-    {d:'Mon',w:[['yoga','Hot yoga AM'],['tempo','Tempo 5 mi + strides PM']],p:'1 mi @ 10:30 → 3 mi @ 9:11/mi → 1 mi @ 10:30 → 4×100m strides',n:'Aug 4 — Venice Beach boardwalk'},
-    {d:'Tue',w:[['lift','Full lift'],['event','KBBQ dinner']],n:'Aug 5 — Quarters / Baekjeong / Origin + Cabo prep'}
+    {d:'Sat',dt:'Aug 1', w:[['long','Long run 8 mi']], p:'8 mi @ 10:00/mi — push last 2 mi @ 9:11/mi',n:'first free Saturday — peak run #1'},
+    {d:'Sun',dt:'Aug 2', w:[['rest','Full rest']], n:'mandatory recovery after 8-mile run'},
+    {d:'Mon',dt:'Aug 3', w:[['rest','Rest / easy walk']], n:'2nd recovery day — let the long run absorb'},
+    {d:'Tue',dt:'Aug 4', w:[['legs','Leg Day A']], n:'2 full rest days since long run — legs ready for strength'},
+    {d:'Wed',dt:'Aug 5', w:[['lift','Upper lift'],['event','KBBQ dinner']], n:'Quarters / Baekjeong / Origin + Cabo prep'}
   ]},
+  // ─────────────────────────────────────────────────────────
+  // WEEK 15  Aug 6 (Thu) – Aug 9 (Sun)
+  // ─────────────────────────────────────────────────────────
   {num:15,type:'free',dates:'Aug 6–9',phase:'peak',miles:'6',
-   events:['Aug 6: Flight to Cabo — REST','Aug 9: Travel home — REST'],
-   focus:'Flight day Aug 6 = rest, settle in. Run Fri Aug 7 and Sat Aug 8 when settled. Travel home Aug 9 = rest.',
+   events:['Thu Aug 6: Flight day — REST (travel)','Sun Aug 9: Travel home — REST'],
+   focus:'Flight day = rest, settle in. Run Friday Aug 7 and Saturday Aug 8 when settled and comfortable. Travel home Sunday = rest.',
    days:[
-    {d:'Thu',w:[['drive','Flight day — REST']],n:'Aug 6 — travel to Cabo, settle in. No running.'},
-    {d:'Fri',w:[['easy','Beach run']],p:'3 mi @ 10:15/mi — easy morning beach run',n:'Aug 7 — settled in Cabo'},
-    {d:'Sat',w:[['easy','Beach run']],p:'3 mi @ 10:15/mi — easy morning',n:'Aug 8 — Cabo'},
-    {d:'Sun',w:[['drive','Travel home — REST']],n:'Aug 9 — flight back, full rest'}
+    {d:'Thu',dt:'Aug 6', w:[['drive','Flight day — REST']], n:'travel to Cabo, settle in'},
+    {d:'Fri',dt:'Aug 7', w:[['easy','Beach run 3 mi']], p:'3 mi @ 10:15/mi — easy morning beach run',n:'settled in Cabo ✓'},
+    {d:'Sat',dt:'Aug 8', w:[['easy','Beach run 3 mi']], p:'3 mi @ 10:15/mi — morning',n:'Cabo'},
+    {d:'Sun',dt:'Aug 9', w:[['drive','Travel home — REST']], n:'flight back'}
   ]},
-  {num:16,type:'free',dates:'Aug 10–18',phase:'peak',miles:'26',
-   events:['Biggest training block of the plan','Rooftop dinner','Sandstone Peak hike','Six Flags'],
-   focus:'9 free days. 5 quality run days. This is where sub-57 gets built. Stack training Mon–Fri, protect the weekend activities.',
+  // ─────────────────────────────────────────────────────────
+  // WEEK 16  Aug 10 (Mon) – Aug 18 (Tue)
+  // ─────────────────────────────────────────────────────────
+  {num:16,type:'free',dates:'Aug 10–18',phase:'peak',miles:'21',
+   events:['Griffith Park hike Tue Aug 11','Rooftop dinner Thu Aug 13','Peak long run Sat Aug 15','Sandstone Peak hike Mon Aug 17'],
+   focus:'The plan\'s biggest block. Key structure: easy Mon → hike Tue → REST Wed → TEMPO Thu → REST Fri → LONG RUN Sat → REST Sun → Sandstone hike Mon → easy Tue. Two hard training sessions (tempo + long run) separated by a full rest day. Sandstone comes after 1 rest day from the long run.',
    days:[
-    {d:'Mon',w:[['easy','Easy 4 mi']],p:'4 mi @ 9:45/mi — post-Cabo shakeout',n:'Aug 10 — Venice / SM'},
-    {d:'Tue',w:[['legs','Leg Day A']],n:'Aug 11'},
-    {d:'Wed',w:[['yoga','Hot yoga AM'],['tempo','Tempo 5 mi PM']],p:'1 mi @ 10:30 → 3 mi @ 9:00/mi → 1 mi @ 10:30',n:'Aug 12 — SM boardwalk'},
-    {d:'Thu',w:[['lift','Upper lift'],['event','Rooftop dinner']],n:'Aug 13 — Calabra / Loulou'},
-    {d:'Fri',w:[['long','Long run 9 mi']],p:'9 mi @ 9:50/mi, push last 2 mi @ 9:11/mi',n:'Aug 14 — Malibu or SM, morning'},
-    {d:'Sat',w:[['hike','Sandstone Peak Hike']],n:'Aug 15',hike:{name:'Sandstone Peak — Santa Monica Mtns, Malibu',detail:'6.4 mi RT · 2,600 ft gain · Highest peak in Santa Monica Mtns · Crown of the Sea Trail · Ocean + valley views both sides'}},
-    {d:'Sun',w:[['event','Six Flags']],n:'Aug 16 — active rest day, no running'},
-    {d:'Mon',w:[['legs','Leg Day B']],n:'Aug 17 — Newport / Laguna after gym'},
-    {d:'Tue',w:[['yoga','Hot yoga AM'],['tempo','Tempo 4 mi + strides PM']],p:'1 mi easy → 2.5 mi @ 9:00/mi → 4×100m strides',n:'Aug 18 — Venice'}
+    {d:'Mon',dt:'Aug 10', w:[['easy','Easy 4 mi']], p:'4 mi @ 9:45/mi — post-Cabo shakeout',n:'Venice / Santa Monica'},
+    {d:'Tue',dt:'Aug 11', w:[['hike','Griffith Park Hike']], n:'Aug 11',hike:{name:'Griffith Park — Mt Hollywood Trail',detail:'5 mi RT · 900 ft gain · 360° LA skyline views · Berlin Forest trail up · Active recovery day'}},
+    {d:'Wed',dt:'Aug 12', w:[['rest','Rest']], n:'recovery after hike — let legs absorb before quality work'},
+    {d:'Thu',dt:'Aug 13', w:[['tempo','Tempo 5 mi']], p:'1 mi easy → 3 mi @ 9:00/mi → 1 mi easy — well-rested after Wed rest',n:'rooftop dinner after (Calabra / Loulou)'},
+    {d:'Fri',dt:'Aug 14', w:[['rest','Full rest']], n:'mandatory rest before peak long run'},
+    {d:'Sat',dt:'Aug 15', w:[['long','Long run 9 mi']], p:'9 mi @ 9:50/mi — push last 2 mi @ 9:11/mi — PEAK RUN',n:'Malibu or Santa Monica — 2 days since tempo with rest Fri ✓'},
+    {d:'Sun',dt:'Aug 16', w:[['rest','Full rest']], n:'mandatory rest after peak long run'},
+    {d:'Mon',dt:'Aug 17', w:[['hike','Sandstone Peak Hike']], n:'Aug 17',hike:{name:'Sandstone Peak — Santa Monica Mtns, Malibu',detail:'6.4 mi RT · 2,600 ft gain · Highest peak in Santa Monica Mtns · Crown of the Sea Trail · Best views in LA — 1 rest day buffer from long run'}},
+    {d:'Tue',dt:'Aug 18', w:[['easy','Easy 3 mi']], p:'3 mi @ 9:45/mi — very easy, day after Sandstone',n:'begin taper mindset'}
   ]},
-  {num:17,type:'free',dates:'Aug 19–25',phase:'taper',miles:'18',
-   events:['Taper — volume drops, intensity stays','Temescal Canyon Hike','Universal Studios'],
-   focus:'Feeling slow and undertrained is the taper working. Volume is cut hard but race-pace work stays. Body is loading glycogen.',
+  // ─────────────────────────────────────────────────────────
+  // WEEK 17  Aug 19 (Wed) – Aug 25 (Tue)
+  // ─────────────────────────────────────────────────────────
+  {num:17,type:'free',dates:'Aug 19–25',phase:'taper',miles:'12',
+   events:['Taper — volume drops, intensity stays','Temescal Canyon hike Sun Aug 23','Six Flags Mon Aug 24'],
+   focus:'Tempo first while legs still have sharpness, then let the week breathe. Sluggishness = taper working. Do NOT add extra miles. Temescal is a short light hike — perfect taper activity.',
    days:[
-    {d:'Wed',w:[['yoga','Hot yoga AM'],['easy','Easy 3 mi PM']],p:'3 mi @ 9:45/mi',n:'Aug 19'},
-    {d:'Thu',w:[['legs','Leg Day (light — 70% vol.)']],n:'Aug 20 — reduce weight, keep movement pattern'},
-    {d:'Fri',w:[['yoga','Hot yoga AM'],['tempo','Tempo 3 mi + strides PM']],p:'1 mi easy → 2 mi @ 9:11/mi → 4 strides',n:'Aug 21 — short and sharp'},
-    {d:'Sat',w:[['long','Long run 6 mi']],p:'6 mi @ 10:00/mi — taper run, this feels easy. Good.',n:'Aug 22 — Santa Monica'},
-    {d:'Sun',w:[['hike','Temescal Canyon Hike']],n:'Aug 23',hike:{name:'Temescal Canyon — Pacific Palisades',detail:'3.5 mi RT · 900 ft gain · Waterfall en route · Ends near PCH beach · Light taper-friendly hike'}},
-    {d:'Mon',w:[['event','Universal Studios']],n:'Aug 24 — active rest, no running'},
-    {d:'Tue',w:[['easy','Easy 3 mi']],p:'3 mi @ 9:45/mi — Venice / SM shakeout',n:'Aug 25'}
+    {d:'Wed',dt:'Aug 19', w:[['yoga','Hot yoga AM'],['tempo','Tempo 3 mi + strides PM']], p:'1 mi easy → 2 mi @ 9:11/mi → 4×100m strides',n:'short, sharp — keeps race-pace muscle memory'},
+    {d:'Thu',dt:'Aug 20', w:[['legs','Leg Day (light — 70%)']], n:'reduce weight, keep movements. Day after tempo — different stimulus.'},
+    {d:'Fri',dt:'Aug 21', w:[['rest','Rest']], n:'recovery after leg day'},
+    {d:'Sat',dt:'Aug 22', w:[['long','Long run 6 mi']], p:'6 mi @ 10:00/mi — taper run. This will feel easy. That\'s the point.',n:'Santa Monica — 1 rest day after leg day ✓'},
+    {d:'Sun',dt:'Aug 23', w:[['hike','Temescal Canyon Hike']], n:'Aug 23',hike:{name:'Temescal Canyon — Pacific Palisades',detail:'3.5 mi RT · 900 ft gain · Waterfall en route · Ends near PCH beach · Short and scenic — ideal taper activity'}},
+    {d:'Mon',dt:'Aug 24', w:[['event','Six Flags']], n:'active fun day — walking only, no running stress on legs'},
+    {d:'Tue',dt:'Aug 25', w:[['easy','Easy 3 mi']], p:'3 mi @ 9:45/mi — final run before race week',n:''}
   ]},
-  {num:18,type:'free',dates:'Aug 26–Sep 4',phase:'race-week',miles:'8',
-   events:['Aug 26: POD load','Final Venice Beach run','Sep 7: Lease ends — race first, move after'],
-   focus:'Race week. Protect the legs completely. 8–9 hrs sleep every night. Carb load Sep 3–4. Everything else is secondary — race is done before the move.',
+  // ─────────────────────────────────────────────────────────
+  // WEEK 18  Aug 26 (Wed) – Sep 5 (Sat) — RACE DAY
+  // ─────────────────────────────────────────────────────────
+  {num:18,type:'free',dates:'Aug 26–Sep 5',phase:'race-week',miles:'5 + race',
+   events:['Wed Aug 26: POD load','Sat Aug 29: Universal Studios','Sat Sep 5: RACE DAY (Long Beach 10k)'],
+   focus:'Protect the legs all week. Sleep 8–9 hrs every night. Carb load Wed Sep 2 through Fri Sep 4. Lay kit out Friday night. Race is Saturday morning — go get it.',
    days:[
-    {d:'Wed',w:[['lift','Lift — upper only']],n:'Aug 26 — last gym + POD loading'},
-    {d:'Thu',w:[['easy','Easy 3 mi + strides']],p:'3 mi @ 9:45/mi + 4×100m strides',n:'Aug 27 — feel sharp, not tired'},
-    {d:'Fri',w:[['rest','Rest']],n:'Aug 28'},
-    {d:'Sat',w:[['rest','Rest']],n:'Aug 29'},
-    {d:'Sun',w:[['easy','Easy 2 mi']],p:'2 mi @ 9:50/mi — Venice Beach, final LA run',n:'Aug 30 — go out right'},
-    {d:'Mon',w:[['rest','Rest']],n:'Sep 1'},
-    {d:'Tue',w:[['rest','Rest']],n:'Sep 2'},
-    {d:'Wed',w:[['rest','Rest']],n:'Sep 3 — carb load: pasta, rice, oats. Stay off feet.'},
-    {d:'Thu',w:[['rest','Rest']],n:'Sep 4 — lay kit out the night before. Sleep early. No alcohol.'},
-    {d:'Fri',w:[['race','RACE — Long Beach 10k']],p:'Goal A: 9:11/mi · Goal B: 9:40/mi · Start conservative',n:'Sep 5'}
+    {d:'Wed',dt:'Aug 26', w:[['lift','Lift — upper only']], n:'last gym session + POD load'},
+    {d:'Thu',dt:'Aug 27', w:[['easy','Easy 3 mi + strides']], p:'3 mi @ 9:45/mi + 4×100m strides',n:'feel sharp, not tired'},
+    {d:'Fri',dt:'Aug 28', w:[['rest','Rest']], n:''},
+    {d:'Sat',dt:'Aug 29', w:[['event','Universal Studios']], n:'active rest — lots of walking, no running stress'},
+    {d:'Sun',dt:'Aug 30', w:[['easy','Easy 2 mi']], p:'2 mi @ 9:50/mi — Venice Beach, final LA run',n:'go out right'},
+    {d:'Mon',dt:'Aug 31', w:[['rest','Rest']], n:''},
+    {d:'Tue',dt:'Sep 1', w:[['rest','Rest']], n:''},
+    {d:'Wed',dt:'Sep 2', w:[['rest','Rest']], n:'carb load starts — pasta, rice, oats'},
+    {d:'Thu',dt:'Sep 3', w:[['rest','Rest']], n:'carb load continues'},
+    {d:'Fri',dt:'Sep 4', w:[['rest','Rest']], n:'lay kit out tonight — bib, shoes, watch charged. Sleep early. No alcohol.'},
+    {d:'Sat',dt:'Sep 5', w:[['race','RACE — Long Beach 10k']], p:'A: 9:11/mi · B: 9:40/mi · Mile 1 @ 9:20 conservative · Push miles 4–6',n:'RACE DAY'}
   ]}
 ];
 
@@ -490,17 +527,17 @@ function build(){
         <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span class="wkd">${wk.dates}</span><div class="wkb">${tb}${pb2}${nb}</div></div>
         ${evs?`<div class="wke">${evs}</div>`:''}
       </div>
-      <span class="wkmi">${wk.miles||''} mi</span>
+      <span class="wkmi">${wk.miles} mi</span>
       <span class="wkch">&#8964;</span>
     </div>
     <div class="wkdet"><div class="dw">
       ${wk.days.map(d=>`<div class="dr">
-        <span class="dn">${d.d}</span>
+        <div class="dl"><span class="dn">${d.d}</span><span class="ddate">${d.dt}</span></div>
         <div class="dc">
           ${d.w.map(([t,l])=>`<span class="pill ${pc[t]}">${l}</span>`).join('')}
-          ${d.p?`<span class="pace-note">&#9654; ${d.p}</span>`:''}
+          ${d.p?`<span class="pnote">&#9654; ${d.p}</span>`:''}
           ${d.n?`<span class="dnote">${d.n}</span>`:''}
-          ${d.ff?`<div class="fairfield-note">&#9888; Fairfield shift day — run only if shift is afternoon/PM. Skip if morning or unknown shift.</div>`:''}
+          ${d.ff?`<div class="ffnote">&#9888; Fairfield shift day — pick one only: run AM outside · treadmill PM · or lift.</div>`:''}
           ${d.hike?`<div class="hcard"><div class="hcn">&#9968; ${d.hike.name}</div><div class="hcd">${d.hike.detail}</div></div>`:''}
         </div>
       </div>`).join('')}
