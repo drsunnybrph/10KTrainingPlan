@@ -126,7 +126,7 @@ body{background:var(--bg);color:var(--txt);font-family:var(--fb);font-size:15px;
 .ffnote{font-size:11px;background:rgba(244,163,30,.08);border:1px solid rgba(244,163,30,.2);border-radius:6px;padding:5px 10px;margin-top:4px;width:100%;color:var(--amb)}
 .wkf{margin-top:10px;padding:8px 12px;background:var(--sur);border-radius:8px;border-left:3px solid var(--bdrl);font-size:12px;color:var(--tx2);line-height:1.6}
 .rc{background:var(--card);border:1px solid rgba(244,99,30,.4);border-radius:16px;padding:1.5rem;margin-top:1.5rem;position:relative;overflow:hidden}
-.rc::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(244,99,30,.1) 0%,transparent 70%);pointer-events:none}
+.rc::before{content:'absolute';top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(244,99,30,.1) 0%,transparent 70%);pointer-events:none}
 .rct{font-family:var(--fh);font-size:1.6rem;font-weight:800;color:var(--org);letter-spacing:.02em;margin-bottom:4px}
 .rcs{font-size:13px;color:var(--tx2);margin-bottom:1.2rem;line-height:1.5}
 .rcg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
@@ -240,7 +240,7 @@ const weeks=[
   // ─────────────────────────────────────────────────────────
   // WEEK 1  May 6 (Wed) – May 12 (Tue)
   // ─────────────────────────────────────────────────────────
-  {num:1,type:'work',dates:'May 6–12',phase:'base',miles:'6',current:true,
+  {num:1,type:'work',dates:'May 6–12',phase:'base',miles:'6',current:false,
    events:['Runs shift to Sun May 10 + Mon May 11'],
    focus:'Missed May 6 and 8 — no stress. Pick up two easy 3-milers on Sunday and Monday before the real plan kicks off Wednesday the 13th.',
    days:[
@@ -255,46 +255,46 @@ const weeks=[
   // ─────────────────────────────────────────────────────────
   // WEEK 2  May 13 (Wed) – May 19 (Tue)
   // ─────────────────────────────────────────────────────────
-  {num:2,type:'off',dates:'May 13–19',phase:'base',miles:'13',
+  {num:2,type:'off',dates:'May 13–19',phase:'base',miles:'13',current:true,
    events:['Sat May 16 + Sun May 17: working 3pm–1:30am'],
-   focus:'Real plan starts here. Yoga AM → run PM. Legs on their own days — never combined with a run. Sat long run done before 3pm shift. 2-day buffer between long run (Sat) and Leg Day B (Mon).',
+   focus:'Real plan starts here. Yoga AM → run PM. Legs on their own days — never combined with a run. Sat long run done before 3pm shift.',
    days:[
     {d:'Wed',dt:'May 13', w:[['yoga','Hot yoga AM'],['easy','Easy 4 mi PM']], p:'4 mi @ 10:45/mi — fully conversational',n:'ClassPass, book earliest slot'},
     {d:'Thu',dt:'May 14', w:[['legs','Leg Day A']], n:'squats, leg press, lunges, extensions, calves — easy run Wed means legs are fresh'},
     {d:'Fri',dt:'May 15', w:[['yoga','Hot yoga AM'],['easy','Easy 3 mi PM']], p:'3 mi @ 10:45/mi — yoga loosens DOMS from Leg Day A',n:'working 3pm — done by noon'},
     {d:'Sat',dt:'May 16', w:[['long','Long run 6 mi']], p:'6 mi @ 10:45–11:00/mi',n:'working 3pm — start by 7:30am, done by 9:30am'},
-    {d:'Sun',dt:'May 17', w:[['rest','Rest']], n:'working 3pm'},
-    {d:'Mon',dt:'May 18', w:[['legs','Leg Day B']], n:'2 days since long run with 1 rest in between — good timing'},
-    {d:'Tue',dt:'May 19', w:[['rest','Rest']], n:''}
+    {d:'Sun',dt:'May 17', w:[['legs','Leg Day A (12:00 PM)']], n:'ER Shift 3:00 PM – 1:30 AM'},
+    {d:'Mon',dt:'May 18', w:[['yoga','Yoga (12:00 PM)'],['easy','Run 3 mi (12:00 PM)']], p:'3 mi @ 10:45/mi',n:'Off'},
+    {d:'Tue',dt:'May 19', w:[['yoga','Yoga/Stretching (6:00 PM)'],['easy','Run 4 mi (6:00 PM)']], p:'4 mi @ 10:45/mi',n:'Off - Evening run with Nichole'}
   ]},
   // ─────────────────────────────────────────────────────────
   // WEEK 3  May 20 (Wed) – May 26 (Tue)
   // ─────────────────────────────────────────────────────────
-  {num:3,type:'work',dates:'May 20–26',phase:'base',miles:'6',
-   events:['Mon May 25: Memorial Day (check gym hours)'],
-   focus:'Simi work week. Run AM before 3pm shift, lift upper body at lunch. Pace is easy — building aerobic foundation, not fitness.',
+  {num:3,type:'work',dates:'May 20–26',phase:'base',miles:'10',
+   events:['Simi 7-Day Clinical Stretch'],
+   focus:'Aggressively optimized around Adventist ER and M2 shifts. AM runs / Lunch lifts on 3pm ER shifts. AM only for M2 shifts.',
    days:[
-    {d:'Wed',dt:'May 20', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'3 mi @ 10:30/mi',n:'chest / tri'},
-    {d:'Thu',dt:'May 21', w:[['lift','Lift (lunch)']], n:'back / bi'},
-    {d:'Fri',dt:'May 22', w:[['easy','Run AM'],['lift','Lift (lunch)']], p:'3 mi @ 10:30/mi',n:'shoulders'},
-    {d:'Sat',dt:'May 23', w:[['lift','Lift (lunch)']], n:'upper + accessories'},
-    {d:'Sun',dt:'May 24', w:[['rest','Rest']], n:''},
-    {d:'Mon',dt:'May 25', w:[['lift','Lift (lunch)']], n:'Memorial Day — check if gym is open'},
-    {d:'Tue',dt:'May 26', w:[['rest','Rest']], n:''}
+    {d:'Wed',dt:'May 20', w:[['legs','Leg Day B (12:00 PM)']], n:'ER Shift 3:00 PM – 1:30 AM'},
+    {d:'Thu',dt:'May 21', w:[['easy','Run AM 3 mi (12:00 PM)'],['lift','Lift Chest/Tri (10:00 PM)']], p:'3 mi @ 10:30/mi',n:'ER Shift 3:00 PM – 1:30 AM'},
+    {d:'Fri',dt:'May 22', w:[['lift','Lift Back/Bi (12:00 PM)']], n:'M2 Shift 1:30 PM – 12:00 AM (AM mandatory)'},
+    {d:'Sat',dt:'May 23', w:[['easy','Run AM 3 mi (12:00 PM)']], p:'3 mi @ 10:30/mi',n:'M2 Shift 1:30 PM – 12:00 AM (AM mandatory)'},
+    {d:'Sun',dt:'May 24', w:[['easy','Run AM 4 mi (12:00 PM)'],['lift','Lift Shoulders (10:00 PM)']], p:'4 mi @ 10:30/mi',n:'ER Shift 3:00 PM – 1:30 AM'},
+    {d:'Mon',dt:'May 25', w:[['yoga','Active Recovery (12:00 PM)']], n:'ER Shift 3:00 PM – 1:30 AM'},
+    {d:'Tue',dt:'May 26', w:[['rest','Rest']], n:'ER Shift 3:00 PM – 1:30 AM - Preserve legs'}
   ]},
   // ─────────────────────────────────────────────────────────
   // WEEK 4  May 27 (Wed) – Jun 2 (Tue)
   // ─────────────────────────────────────────────────────────
-  {num:4,type:'off',dates:'May 27–Jun 2',phase:'base',miles:'4–10',
-   events:['Thu May 28: Leg Day A → Drive Simi→Fairfield (6 hrs)','Fri May 29–Mon Jun 1: Fairfield shifts','Tue Jun 2: Drive Fairfield→Simi (6 hrs) — REST'],
-   focus:'May 27: yoga + run only — no legs today. May 28: Leg Day A in the morning, then drive. Drive REST days on both ends. Fairfield work days: pick ONE — run AM, treadmill PM, or lift. Jun 1 is ideal for Leg Day B since it\'s a Fairfield lifting option.',
+  {num:4,type:'off',dates:'May 27–Jun 2',phase:'base',miles:'7',
+   events:['Thu May 28: Drive Simi→Fairfield (6 hrs)','Fri May 29–Sat May 30: Fairfield shifts','Tue Jun 2: Drive Fairfield→Simi (6 hrs)'],
+   focus:'Protecting the Thursday drive, while capitalizing on your off days to stack volume without clinical fatigue. Leg days protected from drives and shifts.',
    days:[
-    {d:'Wed',dt:'May 27', w:[['yoga','Hot yoga AM'],['easy','Easy 4 mi PM']], p:'4 mi @ 10:30/mi',n:'Simi — NO legs today, saving for tomorrow morning'},
-    {d:'Thu',dt:'May 28', w:[['legs','Leg Day A'],['drive','Drive to Fairfield (6 hrs)']], n:'Legs first in AM, then hit the road. No running today.'},
-    {d:'Fri',dt:'May 29', w:[['easy','Run AM 3 mi']], p:'3 mi @ 10:30/mi — OR lift instead. Pick one.',n:'Fairfield',ff:true},
-    {d:'Sat',dt:'May 30', w:[['easy','Run AM 3 mi']], p:'3 mi @ 10:30/mi — OR lift instead',n:'Fairfield',ff:true},
-    {d:'Sun',dt:'May 31', w:[['rest','Rest']], n:'Fairfield — mid-trip, rest regardless'},
-    {d:'Mon',dt:'Jun 1', w:[['legs','Leg Day B']], n:'Fairfield — good day to lift instead of run',ff:true},
+    {d:'Wed',dt:'May 27', w:[['legs','Leg Day A (12:00 PM)']], n:'Off - Heavy lift before drive'},
+    {d:'Thu',dt:'May 28', w:[['rest','Rest (Drive to Fairfield)']], n:'Emergency Shift 2:30 PM – 1:00 AM (Drive + Shift = Mandatory full rest)'},
+    {d:'Fri',dt:'May 29', w:[['lift','Lift Chest/Tri (12:00 PM)']], n:'Emergency Shift 2:30 PM – 1:00 AM (AM only, no stack)'},
+    {d:'Sat',dt:'May 30', w:[['easy','Run AM 3 mi (12:00 PM)']], p:'3 mi @ 10:30/mi',n:'Emergency Shift 2:30 PM – 1:00 AM (AM only, no stack)'},
+    {d:'Sun',dt:'May 31', w:[['legs','Leg Day B (6:00 PM)']], n:'Zoom Traffic School (8:00 AM – 5:00 PM)'},
+    {d:'Mon',dt:'Jun 1', w:[['easy','Run AM 4 mi (12:00 PM)'],['lift','Lift Back/Bi (6:00 PM)']], p:'4 mi @ 10:30/mi',n:'Off - Split AM run / PM lift'},
     {d:'Tue',dt:'Jun 2', w:[['drive','Drive Fairfield→Simi — REST']], n:'6 hrs — do not run'}
   ]},
   // ─────────────────────────────────────────────────────────
